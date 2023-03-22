@@ -10,7 +10,7 @@
   ],
   "description": "Thematic break Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/delimiter",
+  "repository": "https://github.com/SPANDigital/presidium-wysiwyg-thematic-break",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
