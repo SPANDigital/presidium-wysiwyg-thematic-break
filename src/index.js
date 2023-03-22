@@ -3,10 +3,10 @@
  */
 import './index.css';
 
-import { IconDelimiter } from '@codexteam/icons'
+import { IconThematic } from '@codexteam/icons'
 
 /**
- * Delimiter Block for the Editor.js.
+ * Thematic Block for the Editor.js.
  *
  * @author CodeX (team@ifmo.su)
  * @copyright CodeX 2018
@@ -15,10 +15,10 @@ import { IconDelimiter } from '@codexteam/icons'
  */
 
 /**
- * @typedef {Object} DelimiterData
+ * @typedef {Object} ThematicData
  * @description Tool's input and output data format
  */
-export default class Delimiter {
+export default class ThematicBreak {
 
   /**
    * Notify core that read-only mode is supported
@@ -39,7 +39,7 @@ export default class Delimiter {
   /**
    * Render plugin`s main Element and fill it with saved data
    *
-   * @param {{data: DelimiterData, config: object, api: object}}
+   * @param {{data: ThematicData, config: object, api: object}}
    *   data — previously saved data
    *   config - user config for Tool
    *   api - Editor.js API
@@ -49,7 +49,7 @@ export default class Delimiter {
 
     this._CSS = {
       block: this.api.styles.block,
-      wrapper: 'ce-delimiter'
+      wrapper: 'ce-thematic'
     };
 
     this._data = {};
@@ -64,7 +64,7 @@ export default class Delimiter {
    * @private
    */
   drawView() {
-    let div = document.createElement('DIV');
+    let div = document.createElement('HR');
 
     div.classList.add(this._CSS.wrapper, this._CSS.block);
 
@@ -83,7 +83,7 @@ export default class Delimiter {
   /**
    * Extract Tool's data from the view
    * @param {HTMLDivElement} toolsContent - Paragraph tools rendered view
-   * @returns {DelimiterData} - saved data
+   * @returns {ThematicData} - saved data
    * @public
    */
   save(toolsContent) {
@@ -99,8 +99,8 @@ export default class Delimiter {
    */
   static get toolbox() {
     return {
-      icon: IconDelimiter,
-      title: 'Delimiter'
+      icon: IconThematic,
+      title: 'Thematic Break'
     };
   }
 }
