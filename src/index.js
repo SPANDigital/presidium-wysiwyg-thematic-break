@@ -3,7 +3,7 @@
  */
 import './index.css';
 
-import { IconThematic } from '@codexteam/icons'
+import { IconDelimiter } from '@codexteam/icons'
 
 /**
  * Thematic Block for the Editor.js.
@@ -64,8 +64,9 @@ export default class ThematicBreak {
    * @private
    */
   drawView() {
-    let div = document.createElement('DIV');
-    let hr = div.createElement('DIV');
+    const div = document.createElement('DIV');
+    const hr = document.createElement('HR');
+    div.appendChild(hr);
 
     div.classList.add(this._CSS.wrapper, this._CSS.block);
 
@@ -100,7 +101,7 @@ export default class ThematicBreak {
    */
   static get toolbox() {
     return {
-      icon: IconThematic,
+      icon: IconDelimiter,
       title: 'Thematic Break'
     };
   }

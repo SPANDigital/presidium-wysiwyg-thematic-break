@@ -2,3 +2,7 @@
     line-height: 1.6em;
     width: 100%;
 }
+
+.ce-thematic > hr {
+    display: block !important;
+}
