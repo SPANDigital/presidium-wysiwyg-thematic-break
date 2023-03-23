@@ -1,10 +1,4 @@
-![](https://badgen.net/badge/Editor.js/v2.0/blue)
-
-# Delimiter Tool for Editor.js
-
-Delimiter Tool for the [Editor.js](https://editorjs.io).
-
-![](https://capella.pics/de70e7f8-56cd-4779-848f-52c3f68deb47.jpg)
+# Thematic Break Tool for Presidium WYSIWYG Editor
 
 ## Installation
 
@@ -13,30 +7,7 @@ Delimiter Tool for the [Editor.js](https://editorjs.io).
 Get the package
 
 ```shell
-npm i --save-dev @editorjs/delimiter
-```
-
-Include module at your application
-
-```javascript
-const Delimiter = require('@editorjs/delimiter');
-```
-
-### Download to your project's source dir
-
-1. Upload folder `dist` from repository
-2. Add `dist/bundle.js` file to your page.
-
-### Load from CDN
-
-You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/delimiter).
-
-`https://cdn.jsdelivr.net/npm/@editorjs/delimiter@1.0.1`
-
-Require this script on a page with Editor.js.
-
-```html
-<script src="..."></script>
+yarn add @spandigital/presidium-wysiwyg-thematic-break
 ```
 
 ## Usage
@@ -49,7 +20,7 @@ var editor = EditorJS({
   
   tools: {
     ...
-    delimiter: Delimiter,
+    thematic: ThematicBreak
   }
   
   ...
@@ -66,8 +37,21 @@ This Tool returns empty object.
 
 ```json
 {
-    "type" : "delimiter",
+    "type" : "thematic",
     "data" : {}
 }
 ```
+## Releases
 
+### Master
+To release a new non-beta version, do the following:
+
+1. Merge your changes into `master`
+2. Increment the version in `package.json` (The release GitHub action will not run unless this is done)
+3. run `npm i`
+4. Commit and push
+
+The package will then be published to the @spandigital registry.
+
+### Develop
+Beta packages are automatically published whenever a commit is pushed to the `develop` branch.
