@@ -64,7 +64,8 @@ export default class ThematicBreak {
    * @private
    */
   drawView() {
-    let div = document.createElement('HR');
+    let div = document.createElement('DIV');
+    let hr = div.createElement('DIV');
 
     div.classList.add(this._CSS.wrapper, this._CSS.block);
 
