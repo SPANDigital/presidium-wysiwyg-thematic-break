@@ -27,7 +27,7 @@ module.exports = {
     path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js',
-    library: 'Delimiter',
+    library: 'ThematicBreak',
     libraryTarget: 'umd',
     libraryExport: 'default'
   }
