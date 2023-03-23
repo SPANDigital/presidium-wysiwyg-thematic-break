@@ -3,7 +3,7 @@
  */
 import './index.css';
 
-import { IconDelimiter } from '@codexteam/icons'
+import { IconHorizontalLine } from './line.js';
 
 /**
  * Thematic Block for the Editor.js.
@@ -101,7 +101,7 @@ export default class ThematicBreak {
    */
   static get toolbox() {
     return {
-      icon: IconDelimiter,
+      icon: IconHorizontalLine,
       title: 'Thematic Break'
     };
   }
